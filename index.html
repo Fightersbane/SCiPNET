@@ -45,23 +45,22 @@
       <h2>Cass Pages</h2>
       <p class="author">Author: Henry Percy, 9th Earl of Northumberland (theorized)</p>
       <p class="context">One of many scraps of paper found on Cassandra Barkley's (designation pending) person during admittance to Site-Θ. This was the only piece immediately legible. Further translation currently overseen by Researcher Marco (LTRA-TURE S-19) in lieu of the Department of Terra-Linguistics.</p>
-      <button class="expand-btn" onclick="toggleImage()">View Document 1</button>
-      <div class="image-container" id="image-container" style="display: none;">
+      <button class="expand-btn" onclick="toggleImage('image-container-1')">View Document 1</button>
+      <div class="image-container" id="image-container-1" style="display: none;">
         <img src="docs/Recovered_by_Cass.png" alt="Recovered Image 1">
       </div>
-      <p class="context">Second page decoded. Noted as being clearly terrestrial and Latin-detived.</p>
-      <button class="expand-btn" onclick="toggleImage()">View Document 2</button>
-      <div class="image-container" id="image-container" style="display: none;">
+      <p class="context">Second page decoded. Noted as being clearly terrestrial and Latin-derived.</p>
+      <button class="expand-btn" onclick="toggleImage('image-container-2')">View Document 2</button>
+      <div class="image-container" id="image-container-2" style="display: none;">
         <img src="docs/Recovered_by_Cass_2.png" alt="Recovered Image 2">
       </div>
     </div>
-  </div>
 
-  <script>
-    function toggleImage() {
-      const imageContainer = document.getElementById('image-container');
-      imageContainer.style.display = imageContainer.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
+    <script>
+      function toggleImage(containerId) {
+        const imageContainer = document.getElementById(containerId);
+        imageContainer.style.display = imageContainer.style.display === 'none' ? 'block' : 'none';
+      }
+    </script>
 </body>
 </html>

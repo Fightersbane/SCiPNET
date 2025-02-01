@@ -505,3 +505,18 @@ table p {
     flex: 3;
     padding: 10px;
 }
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.centered-image-short {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    max-height: 50%;
+    height: auto;
+}

@@ -520,3 +520,16 @@ table p {
     max-height: 50%;
     height: auto;
 }
+
+.audio-container {
+    margin-top: 10px;
+    padding: 5px;
+    background-color: rgba(0, 255, 0, 0.1); /* Subtle green glow */
+    border: 1px solid #00ff00; /* Green border for SCP aesthetic */
+    text-align: center;
+}
+
+audio {
+    width: 100%;
+    filter: brightness(0.8) contrast(1.2); /* Retro glow effect */
+}

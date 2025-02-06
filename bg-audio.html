@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Background Audio</title>
+    <style>
+        /* Flexbox for centering the player and button horizontally */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            gap: 10px; /* Space between the audio player and button */
+        }
+
+        audio {
+            height: 40px; /* Adjust audio size */
+        }
+
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="bgAudio" controls autoplay>
+        <source src="audio/yinantiro-bluelantern.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="loopToggle">Toggle Loop</button>
+
+    <script>
+        const audio = document.getElementById('bgAudio');
+        const loopToggle = document.getElementById('loopToggle');
+
+        // Retrieve saved time from localStorage (if any)
+        const savedTime = localStorage.getItem('audioTime');
+        if (savedTime) {
+            audio.currentTime = savedTime; // Set the current time of the audio player
+        }
+
+        // Set initial loop state based on user input
+        loopToggle.addEventListener('click', function() {
+            audio.loop = !audio.loop;
+            loopToggle.textContent = audio.loop ? 'Looping: On' : 'Looping: Off';
+        });
+
+        // Save the audio time to localStorage every time it updates
+        audio.addEventListener('timeupdate', function() {
+            localStorage.setItem('audioTime', audio.currentTime);
+        });
+    </script>
+</body>
+</html>

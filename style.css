@@ -68,6 +68,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     padding: 20px;
     position: relative;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -533,3 +535,15 @@ audio {
     width: 100%;
     filter: brightness(0.8) contrast(1.2); /* Retro glow effect */
 }
+.audio-frame {
+    display: block;
+    width: 100%; /* Full width to prevent overflow */
+    max-width: 300px; /* Keeps it compact */
+    height: 40px; /* Adjust height as needed */
+    border: none;
+    background: transparent;
+    margin: 10px auto; /* Centers the player */
+    position: relative; /* Ensure proper stacking */
+    z-index: 9999; /* Ensure it's on top */
+}
+

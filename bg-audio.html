@@ -37,6 +37,9 @@
         const audio = document.getElementById('bgAudio');
         const loopToggle = document.getElementById('loopToggle');
 
+        //set volume 60% 0.6
+        audio.volume = 0.6;
+
         // Retrieve saved time from localStorage (if any)
         const savedTime = localStorage.getItem('audioTime');
         if (savedTime) {

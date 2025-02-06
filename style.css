@@ -533,6 +533,7 @@ table p {
 
 audio {
     width: 100%;
+    max-width: 100%;
     filter: brightness(0.8) contrast(1.2); /* Retro glow effect */
 }
 .audio-frame {

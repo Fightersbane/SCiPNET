@@ -548,3 +548,7 @@ audio {
     z-index: 9999; /* Ensure it's on top */
 }
 
+.footnote-number {
+    color: blue;
+    font-weight: bold;
+}
